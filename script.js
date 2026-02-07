@@ -115,3 +115,14 @@ function createHeart() {
 
 // control density here 👇
 setInterval(createHeart, 300);
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+  }, 1500); // cute delay
+});
+
+const yourName = "Prasun"; // Name
+
+document.getElementById("title").innerHTML =
+  `Will you be <span style="color:#fff3f6">${yourName}'s</span> Valentine?`;

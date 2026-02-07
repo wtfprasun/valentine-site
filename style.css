@@ -236,4 +236,36 @@ button:active {
   }
 }
 
+/* LOADER */
+#loader {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #ff5f8a, #ff8fab);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  color: white;
+  font-family: "Pacifico", cursive;
+}
 
+.loader-heart {
+  font-size: 60px;
+  animation: heartbeat 1.2s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.25); }
+}
+
+#loader p {
+  margin-top: 12px;
+  font-size: 18px;
+}
+
+const yourName = "Prasun"; // CHANGE NAME HERE 💘
+
+document.getElementById("title").innerHTML =
+  `Will you be <span style="color:#fff3f6">${yourName}'s</span> Valentine?`;
